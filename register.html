@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Criar Conta</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Criar Conta</h2>
+
+      <input id="fullName" type="text" placeholder="Nome Completo" />
+      <input id="username" type="text" placeholder="Nome de usuário" />
+      
+      <input id="email" type="email" placeholder="Seu melhor email" />
+      <input id="password" type="password" placeholder="Crie uma senha forte" />
+
+      <button onclick="register()">Cadastrar</button>
+      
+      <p style="text-align: center; margin-top: 15px;">
+        Já tem uma conta? <a href="login.html">Faça login</a>
+      </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

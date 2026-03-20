@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Posts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>Posts</h2>
+
+    <div class="new-post">
+      <input id="title" placeholder="Título">
+      <textarea id="content" placeholder="Conteúdo"></textarea>
+      <button onclick="createPost()">Criar Post</button>
+    </div>
+
+    <div id="posts"></div>
+
+    <button class="logout" onclick="logout()">Sair</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

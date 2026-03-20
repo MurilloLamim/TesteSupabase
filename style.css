@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  margin: 0;
+}
+
+.container {
+  width: 450px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #4338ca;
+}
+
+.logout {
+  margin-top: 15px;
+  background: #ef4444;
+}
+
+.logout:hover {
+  background: #dc2626;
+}
+
+.post {
+  margin-top: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.post h3 {
+  margin: 0;
+}
+
+.post p {
+  margin: 5px 0;
+}
+
+.actions {
+  margin-top: 5px;
+}
+
+.actions button {
+  background: #ef4444;
+  width: auto;
+  padding: 5px 10px;
+}
