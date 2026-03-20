@@ -35,6 +35,14 @@ button {
   border-radius: 6px;
   cursor: pointer;
   transition: 0.2s;
+  margin-top: 10px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 }
 
 button:hover {

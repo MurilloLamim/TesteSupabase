@@ -79,8 +79,24 @@ async function register() {
 }
 
 async function createPost() {
+  // 1. O Segurança do Front-end: Verifica se tem alguém logado ANTES de chamar a nuvem
+  const { data: { session } } = await supabaseClient.auth.getSession();
+  
+  if (!session) {
+    alert("Você precisa fazer o login primeiro para criar um post!");
+    window.location.href = "index.html"; // Mude para "login.html" se a sua tela de login ainda tiver esse nome
+    return; // Esse 'return' faz a função parar aqui mesmo e não chama a Edge Function
+  }
+
+  // 2. Se estiver logado, pega os textos e manda pra cozinha (Edge Function)
   const title = document.getElementById("title").value;
   const content = document.getElementById("content").value;
+
+  // Validação extra: não deixa criar post vazio
+  if (!title || !content) {
+    alert("Por favor, preencha o título e o conteúdo!");
+    return;
+  }
 
   const result = await callEdgeFunction("create", { title, content });
 
